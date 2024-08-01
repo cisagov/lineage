@@ -1,6 +1,6 @@
 # Lineage Pull Request: CONFLICT #
 
-<img align="left" width="100" src="https://raw.githubusercontent.com/cisagov/action-lineage/develop/src/achtung.gif">
+<img align="left" alt="Achtung!!!" width="100" src="https://raw.githubusercontent.com/cisagov/action-lineage/develop/src/achtung.gif">
 
 [Lineage] has created this pull request to incorporate new changes found in an
 upstream repository:
