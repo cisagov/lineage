@@ -36,6 +36,16 @@ class OnError(Enum):
     FAIL = auto()
 
 
+def clear_ca_variables_in_gha() -> None:
+    """Unset CA variables if running in GitHub Actions."""
+    logging.info("Clearing CA variables...")
+    # Only remove variables we care about
+    for ca_variable in ["REQUESTS_CA_BUNDLE"]:
+        if ca_variable in os.environ:
+            del os.environ[ca_variable]
+            logging.info("Removed %s from environment.", ca_variable)
+
+
 def run(
     cmd: List[str],
     cwd: Optional[str] = None,
@@ -336,6 +346,13 @@ def main() -> None:
         )
         core.error("Missing required input: repo_query", title="Initialization error")
         sys.exit(-1)
+
+    # If the GITHUB_ACTIONS environment variable is set to true it should indicate
+    # that we are running in GitHub Actions. Please see the following documentation
+    # for more information:
+    # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables#default-environment-variables
+    if os.environ.get("GITHUB_ACTIONS", "false") == "true":
+        clear_ca_variables_in_gha()
 
     # Ensure we are working in our workspace
     os.chdir(github_workspace_dir)
