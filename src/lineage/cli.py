@@ -31,11 +31,12 @@ from typing import Any, Union
 import docopt
 from schema import And, Schema, SchemaError
 
+from . import entrypoint
 from ._version import __version__
 
 
 def main() -> None:
-    """Provide a command-line interface."""
+    """Parse and verify command line arguments before calling the main entrypoint."""
     args: dict[str, Union[bool, str]] = docopt.docopt(__doc__, version=__version__)
 
     schema: Schema = Schema(
@@ -68,3 +69,12 @@ def main() -> None:
         # Exit because one or more arguments were invalid
         print(err, file=sys.stderr)
         sys.exit(1)
+
+    entrypoint.main(
+        validated_args["--access-token"],
+        validated_args["--actor"],
+        validated_args["--working-directory"],
+        validated_args["--repo-query"],
+        not validated_args["--exclude-non-public"],
+        not validated_args["--show-non-public"],
+    )

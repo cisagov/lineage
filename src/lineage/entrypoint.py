@@ -298,54 +298,20 @@ def has_existing_pr(repo: Repository.Repository, branch_name: str) -> bool:
     return False
 
 
-def main() -> None:
+def main(
+    access_token: str,
+    github_actor: str,
+    github_workspace_dir: str,
+    repo_query: str,
+    include_non_public: bool,
+    mask_non_public: bool,
+) -> None:
     """Parse environment and perform requested actions."""
     # Set up logging. Force logging output to stdout to allow for GitHub Actions
     # commands to interact with output.
     logging.basicConfig(
         format="%(levelname)s %(message)s", level=logging.INFO, stream=sys.stdout
     )
-
-    # Get inputs from the environment
-    access_token: Optional[str] = core.get_input("access_token")
-    github_actor: Optional[str] = os.environ.get("GITHUB_ACTOR")
-    github_workspace_dir: Optional[str] = os.environ.get("GITHUB_WORKSPACE")
-    mask_non_public: bool = core.get_boolean_input("mask_non_public_repos")
-    repo_query: Optional[str] = core.get_input("repo_query")
-    include_non_public: bool = core.get_boolean_input("include_non_public_repos")
-
-    # sanity checks
-    if access_token is None:
-        logging.fatal(
-            "Access token environment variable must be set. (INPUT_ACCESS_TOKEN)"
-        )
-        core.error("Missing required input: access_token", title="Initialization error")
-        sys.exit(-1)
-
-    if github_actor is None:
-        logging.fatal("GitHub actor environment variable must be set. (GITHUB_ACTOR)")
-        core.error(
-            "GitHub actor environment variable must be set. (GITHUB_ACTOR)",
-            title="Initialization error",
-        )
-        sys.exit(-1)
-
-    if github_workspace_dir is None:
-        logging.fatal(
-            "GitHub workspace environment variable must be set. (GITHUB_WORKSPACE)"
-        )
-        core.error(
-            "GitHub workspace environment variable must be set. (GITHUB_WORKSPACE)",
-            title="Initialization error",
-        )
-        sys.exit(-1)
-
-    if repo_query is None:
-        logging.fatal(
-            "Repository query environment variable must be set. (INPUT_REPO_QUERY)"
-        )
-        core.error("Missing required input: repo_query", title="Initialization error")
-        sys.exit(-1)
 
     # If the GITHUB_ACTIONS environment variable is set to true it should indicate
     # that we are running in GitHub Actions. Please see the following documentation
