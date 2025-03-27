@@ -298,7 +298,7 @@ def has_existing_pr(repo: Repository.Repository, branch_name: str) -> bool:
     return False
 
 
-def main(
+def update_repos(
     access_token: str,
     github_actor: str,
     github_workspace_dir: str,

@@ -70,7 +70,7 @@ def main() -> None:
         print(err, file=sys.stderr)
         sys.exit(1)
 
-    entrypoint.main(
+    entrypoint.update_repos(
         validated_args["--access-token"],
         validated_args["--actor"],
         validated_args["--working-directory"],
