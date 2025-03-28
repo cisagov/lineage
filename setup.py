@@ -93,8 +93,10 @@ setup(
     install_requires=[
         "actions-toolkit",
         "chevron",
+        "docopt",
         "PyGithub",
         "PyYAML",
+        "schema",
         "setuptools",
     ],
     extras_require={
@@ -119,5 +121,5 @@ setup(
         ],
     },
     # Conveniently allows one to run the CLI tool as `lineage`
-    entry_points={"console_scripts": ["lineage = lineage.entrypoint:main"]},
+    entry_points={"console_scripts": ["lineage = lineage.cli:main"]},
 )
