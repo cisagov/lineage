@@ -223,9 +223,13 @@ jobs:
         with:
           # This functionality is poorly implemented and has been
           # causing problems due to the MITM implementation hogging or
-          # leaking memory.  If this happens to you just uncomment
-          # this line.
-          # monitor_permissions: "false"
+          # leaking memory.  As a result we disable it by default.  If
+          # you want to temporarily enable it, simply set
+          # monitor_permissions equal to "true".
+          #
+          # TODO: Re-enable this functionality when practical.  See
+          # cisagov/skeleton-python-library#149 for more details.
+          monitor_permissions: "false"
           # Use a variable to specify the permissions monitoring
           # configuration. By default this will yield the
           # configuration stored in the cisagov organization-level
@@ -293,9 +297,13 @@ jobs:
         with:
           # This functionality is poorly implemented and has been
           # causing problems due to the MITM implementation hogging or
-          # leaking memory.  If this happens to you just uncomment
-          # this line.
-          # monitor_permissions: "false"
+          # leaking memory.  As a result we disable it by default.  If
+          # you want to temporarily enable it, simply set
+          # monitor_permissions equal to "true".
+          #
+          # TODO: Re-enable this functionality when practical.  See
+          # cisagov/skeleton-python-library#149 for more details.
+          monitor_permissions: "false"
           # Use a variable to specify the permissions monitoring
           # configuration. By default this will yield the
           # configuration stored in the cisagov organization-level
@@ -368,9 +376,13 @@ jobs:
         with:
           # This functionality is poorly implemented and has been
           # causing problems due to the MITM implementation hogging or
-          # leaking memory.  If this happens to you just uncomment
-          # this line.
-          # monitor_permissions: "false"
+          # leaking memory.  As a result we disable it by default.  If
+          # you want to temporarily enable it, simply set
+          # monitor_permissions equal to "true".
+          #
+          # TODO: Re-enable this functionality when practical.  See
+          # cisagov/skeleton-python-library#149 for more details.
+          monitor_permissions: "false"
           # Use a variable to specify the permissions monitoring
           # configuration. By default this will yield the
           # configuration stored in the cisagov organization-level
@@ -442,9 +454,13 @@ jobs:
         with:
           # This functionality is poorly implemented and has been
           # causing problems due to the MITM implementation hogging or
-          # leaking memory.  If this happens to you just uncomment
-          # this line.
-          # monitor_permissions: "false"
+          # leaking memory.  As a result we disable it by default.  If
+          # you want to temporarily enable it, simply set
+          # monitor_permissions equal to "true".
+          #
+          # TODO: Re-enable this functionality when practical.  See
+          # cisagov/skeleton-python-library#149 for more details.
+          monitor_permissions: "false"
           # Use a variable to specify the permissions monitoring
           # configuration. By default this will yield the
           # configuration stored in the cisagov organization-level
