@@ -275,7 +275,7 @@ jobs:
       - name: Upload coverage report
         uses: coverallsapp/github-action@v2
         with:
-          flag-name: "py${{ matrix.python-version }}"
+          flag-name: py${{ matrix.python-version }}
           parallel: true
         if: success()
       - name: Setup tmate debug session
