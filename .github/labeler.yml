@@ -52,6 +52,8 @@ test:
           - .isort.cfg
           - .mdl_config.yaml
           - .yamllint
+          - pytest.ini
+          - tests/**/*.py
 upstream update:
   - head-branch:
       # Any Lineage pull requests should use this branch.
