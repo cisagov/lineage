@@ -19,6 +19,7 @@ dependencies:
           # Add any dependency files used.
           - .pre-commit-config.yaml
           - requirements*.txt
+          - setup.py
 documentation:
   - changed-files:
       - any-glob-to-any-file:
