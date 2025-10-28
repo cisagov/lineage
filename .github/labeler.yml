@@ -56,10 +56,9 @@ test:
           - .ansible-lint
           - .bandit.yml
           - .flake8
-          - .isort.cfg
           - .mdl_config.yaml
           - .yamllint
-          - pytest.ini
+          - pyproject.toml
           - tests/**
 typescript:
   - changed-files:
