@@ -4,6 +4,8 @@
 [![License](https://img.shields.io/github/license/cisagov/skeleton-python-library)](https://spdx.org/licenses/)
 [![CodeQL](https://github.com/cisagov/skeleton-python-library/workflows/CodeQL/badge.svg)](https://github.com/cisagov/skeleton-python-library/actions/workflows/codeql-analysis.yml)
 [![Coverage Status](https://coveralls.io/repos/github/cisagov/skeleton-python-library/badge.svg?branch=develop)](https://coveralls.io/github/cisagov/skeleton-python-library?branch=develop)
+[![Code Style](https://img.shields.io/badge/Code%20Style-black-black
+)](https://github.com/psf/black)
 
 This is a generic skeleton project that can be used to quickly get a
 new [cisagov](https://github.com/cisagov) Python library GitHub
