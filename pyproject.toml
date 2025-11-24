@@ -58,7 +58,6 @@ dev = [
     "types-chevron",
     "types-PyYAML",
     "types-requests",
-    "types-setuptools",
 ]
 test = [
     "coverage",
