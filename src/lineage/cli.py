@@ -25,7 +25,7 @@ Options:
 # Standard Python Libraries
 import os.path
 import sys
-from typing import Any, Union
+from typing import Any
 
 # Third-Party Libraries
 import docopt
@@ -37,7 +37,7 @@ from ._version import __version__
 
 def main() -> None:
     """Parse and verify command line arguments before calling the main entrypoint."""
-    args: dict[str, Union[bool, str]] = docopt.docopt(__doc__, version=__version__)
+    args: dict[str, bool | str] = docopt.docopt(__doc__, version=__version__)
 
     schema: Schema = Schema(
         {
