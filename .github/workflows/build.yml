@@ -339,8 +339,6 @@ jobs:
     name: build wheel - py${{ matrix.python-version }}
     needs:
       - diagnostics
-      - lint
-      - test
     permissions:
       # actions/checkout needs this to fetch code
       contents: read
@@ -418,6 +416,7 @@ jobs:
     needs:
       - diagnostics
       - build
+      - test
     permissions:
       # actions/checkout needs this to fetch code
       contents: read
