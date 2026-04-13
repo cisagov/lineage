@@ -41,9 +41,6 @@ updates:
       interval: weekly
 
   - directory: /
-    package-ecosystem: pip
-    schedule:
-      interval: weekly
     # ignore:
     #   # Managed by cisagov/skeleton-python-library
     #   - dependency-name: build
@@ -54,6 +51,9 @@ updates:
     #   - dependency-name: pytest
     #   - dependency-name: setuptools
     #   - dependency-name: twine
+    package-ecosystem: pip
+    schedule:
+      interval: weekly
 
   - directory: /
     package-ecosystem: terraform
