@@ -15,9 +15,9 @@ Lineage is configured using `.github/lineage.yml` in a repository.  Each
 upstream repository is listed in the `lineage` section.
 
 | Key | Description | Required |
-|-----|-------------|:--------:|
+| --- | ----------- | :------: |
 | local-branch | The branch that will receive new changes. | No |
-| remote-url   | The `https` URL of the upstream repository. | Yes |
+| remote-url | The `https` URL of the upstream repository. | Yes |
 | remote-branch | The branch in the upstream repository. | No |
 
 Below is an example configuration that defines two upstream repositories. The

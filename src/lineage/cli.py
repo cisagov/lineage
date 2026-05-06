@@ -4,7 +4,8 @@ Search GitHub for repositories to update based on their configured upstream
 lineage.
 
 Usage:
-    lineage [--exclude-non-public] [--show-non-public] --access-token=TOKEN --actor=ACTOR --repo-query=QUERY --working-directory=DIRECTORY
+    lineage [--exclude-non-public] [--show-non-public] --access-token=TOKEN
+    --actor=ACTOR --repo-query=QUERY --working-directory=DIRECTORY
 
 Options:
     -h --help                      Show this message.
